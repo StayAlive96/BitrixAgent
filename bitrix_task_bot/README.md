@@ -21,7 +21,7 @@ Telegram-бот на Python создаёт задачи в Bitrix24 через I
 ```bash
 mkdir -p ~/bitrix_task_bot
 cd ~/bitrix_task_bot
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
@@ -86,6 +86,7 @@ LOG_LEVEL=INFO
 
 - **401/403 Bitrix**: неверный webhook или нет прав `tasks`.
 - **Telegram Conflict**: бот запущен в двух местах — остановите лишний процесс.
+- **`py` не найден**: используйте `python3 -m venv .venv`.
 - **Файлы не сохраняются**: проверьте права на папку `UPLOAD_DIR`.
 
 ## Systemd (опционально)
